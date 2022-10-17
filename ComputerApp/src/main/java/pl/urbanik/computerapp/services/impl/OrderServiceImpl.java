@@ -1,7 +1,6 @@
 package pl.urbanik.computerapp.services.impl;
 
 import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.io.xml.StaxDriver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import pl.urbanik.computerapp.models.Computer;
@@ -12,6 +11,12 @@ import pl.urbanik.computerapp.nbp.exchange.TableDto;
 import pl.urbanik.computerapp.repository.ComputerRepository;
 import pl.urbanik.computerapp.services.OrderService;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,7 +47,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void saveOrder() {
+    public void saveOrder() throws IOException {
 
         XStream xstream = new XStream();
         xstream.alias("komputer", Computer.class);
@@ -50,12 +55,14 @@ public class OrderServiceImpl implements OrderService {
         xstream.addImplicitCollection(Facture.class, "list");
 
         Facture list = new Facture();
-        for(Computer computer : this.computersList){
+        for (Computer computer : this.computersList) {
             list.add(computer);
         }
 
         String xml = xstream.toXML(list);
-        System.out.println(xml);
+        LocalDateTime time = LocalDateTime.now();
+        Path pathXMLFile = Paths.get("/home/myszczur/Pulpit/computer-task/ComputerApp/src/main/resources/factures" + time + ".XML");
+        Files.write(pathXMLFile, xml.getBytes(), StandardOpenOption.WRITE, StandardOpenOption.APPEND, StandardOpenOption.CREATE);
 
         computerRepository.saveAll(this.computersList);
     }

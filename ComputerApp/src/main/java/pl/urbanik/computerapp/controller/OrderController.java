@@ -11,6 +11,7 @@ import pl.urbanik.computerapp.models.Computer;
 import pl.urbanik.computerapp.services.OrderService;
 
 import javax.validation.Valid;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -43,7 +44,7 @@ public class OrderController {
     }
 
     @GetMapping("/save-order")
-    public String saveOrder() {
+    public String saveOrder() throws IOException {
         orderService.saveOrder();
         return "redirect:/order";
     }
