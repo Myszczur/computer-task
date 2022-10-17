@@ -22,6 +22,7 @@
               </tr>
         </c:forEach>
     </table>
+    <a href="/order/save-order">Submit</a>
 </div>
 </body>
 </html>

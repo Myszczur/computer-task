@@ -9,4 +9,6 @@ public interface OrderService {
     void saveComputerToList(Computer computer);
 
     List<Computer> getSummaryList();
+
+    void saveOrder();
 }

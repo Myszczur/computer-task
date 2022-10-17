@@ -5,9 +5,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Arrays;
-import java.util.Collection;
-
 @Service
 @Slf4j
 public class NbpService implements ExchangeRate {
@@ -19,10 +16,5 @@ public class NbpService implements ExchangeRate {
 
         ResponseEntity<TableDto> forEntity = restTemplate.getForEntity(NBP_API_TABLE, TableDto.class);
         return forEntity.getBody();
-
-//        Arrays.stream(body)
-//                .map(TableDto::getRates)
-//                .flatMap(Collection::stream)
-//                .forEach(r->log.info("rate: {}", r));
     }
 }

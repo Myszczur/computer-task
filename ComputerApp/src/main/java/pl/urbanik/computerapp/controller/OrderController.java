@@ -11,6 +11,7 @@ import pl.urbanik.computerapp.models.Computer;
 import pl.urbanik.computerapp.services.OrderService;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -39,5 +40,11 @@ public class OrderController {
     public String orderList(Model model) {
         model.addAttribute("summary", orderService.getSummaryList());
         return "order/order-summary";
+    }
+
+    @GetMapping("/save-order")
+    public String saveOrder() {
+        orderService.saveOrder();
+        return "redirect:/order";
     }
 }
