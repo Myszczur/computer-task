@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 
 @Controller
 @AllArgsConstructor
@@ -12,12 +14,9 @@ public class RateController {
 
     private final ExchangeRate exchangeRate;
 
-    @RequestMapping("/")
+    @RequestMapping("/nbp")
     @ResponseBody
-    public TableDto getCurrencyTable(){
-
+    public TableDto getCurrencyTable() {
         return exchangeRate.getDataFromTable();
     }
-
-
 }

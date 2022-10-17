@@ -24,8 +24,9 @@ public class Computer {
     @NotBlank(message = "The computer name cannot be empty")
     @Size(max = 50, message = "The name cannot exceed 50 characters")
     private String name;
-    private BigDecimal usdCost;
-    private BigDecimal plnCost;
+    private Double usdCost;
+    private Double plnCost;
+    private LocalDate dataRate;
     private LocalDate accountingDate;
 
     @PrePersist

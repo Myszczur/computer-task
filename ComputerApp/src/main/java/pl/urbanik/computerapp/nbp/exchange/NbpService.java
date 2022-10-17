@@ -18,10 +18,7 @@ public class NbpService implements ExchangeRate {
         RestTemplate restTemplate = new RestTemplate();
 
         ResponseEntity<TableDto> forEntity = restTemplate.getForEntity(NBP_API_TABLE, TableDto.class);
-        TableDto body = forEntity.getBody();
-
-        System.out.println(body);
-        return body;
+        return forEntity.getBody();
 
 //        Arrays.stream(body)
 //                .map(TableDto::getRates)

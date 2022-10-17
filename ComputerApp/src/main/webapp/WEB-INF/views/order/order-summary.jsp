@@ -12,13 +12,14 @@
         <tr>
             <th><h4><strong>Computer name</strong></h4></th>
             <th><h4><strong>USD Cost</strong></h4></th>
-        </tr>
+            <th><h4><strong>PLN Cost</strong></h4></th>
+          </tr>
         <c:forEach items="${summary}" var="summary">
             <tr>
                 <td><strong>${summary.name}</strong></td>
-<%--                <td><strong>${order-summary.plnCost}</strong></td>--%>
                 <td><strong>${summary.usdCost}</strong></td>
-            </tr>
+                <td><strong>${summary.plnCost}</strong></td>
+              </tr>
         </c:forEach>
     </table>
 </div>
