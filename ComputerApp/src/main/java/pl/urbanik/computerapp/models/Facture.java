@@ -6,11 +6,11 @@ import java.util.List;
 public class Facture {
     private List<Computer> list;
 
-    public Facture(){
-        list = new ArrayList<Computer>();
+    public Facture() {
+        list = new ArrayList<>();
     }
 
-    public void add(Computer c){
+    public void add(Computer c) {
         list.add(c);
     }
 }

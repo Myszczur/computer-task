@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 @Slf4j
 public class NbpService implements ExchangeRate {
-    private static final String NBP_API_TABLE = "http://api.nbp.pl/api/exchangerates/rates/c/usd/2016-04-04/?format=json";
+    private static final String NBP_API_TABLE = "http://api.nbp.pl/api/exchangerates/rates/c/usd/2022-01-03/?format=json";
 
     @Override
     public TableDto getDataFromTable() {
