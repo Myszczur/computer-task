@@ -7,6 +7,7 @@ import java.util.List;
 
 @Service
 public interface ComputerService {
+
     List<Computer> getAllComputers();
 
     List<Computer> getAllComputersByData();
@@ -15,5 +16,7 @@ public interface ComputerService {
 
     List<Computer> getAllComputersByNameReverse();
 
-    List<Computer>  getAllComputersByDataRev();
+    List<Computer> getAllComputersByDataRev();
+
+    List<Computer> searchComputers(String keyword);
 }

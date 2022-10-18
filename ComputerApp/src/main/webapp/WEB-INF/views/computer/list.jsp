@@ -11,6 +11,12 @@
 
 <a href="/computer/list-data">Sort by Accounting date</a>
 <div>
+    <form action="/computer" method="post">
+        <div class="center"><input type="text" placeholder="Szukaj Komputera.." name="keyword" id="keyword  ">
+            <button type="submit">&nbsp;&nbsp;Szukaj&nbsp;&nbsp;
+            </button>
+        </div>
+    </form>
     <table>
         <tr>
             <th><h4><strong>Computer Id</strong></h4></th>

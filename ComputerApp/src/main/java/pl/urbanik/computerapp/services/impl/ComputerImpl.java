@@ -42,6 +42,14 @@ public class ComputerImpl implements ComputerService {
     }
 
     @Override
+    public List<Computer> searchComputers(String keyword) {
+        if (keyword != null) {
+            return computerRepository.search(keyword);
+        }
+        return computerRepository.findAll();
+    }
+
+    @Override
     public List<Computer> getAllComputersByData() {
         List<Computer> computers = computerRepository.findAll();
         computers.sort(Comparator.comparing(Computer::getAccountingDate));

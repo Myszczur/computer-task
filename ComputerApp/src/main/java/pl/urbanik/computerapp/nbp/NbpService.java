@@ -1,4 +1,4 @@
-package pl.urbanik.computerapp.nbp.exchange;
+package pl.urbanik.computerapp.nbp;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
