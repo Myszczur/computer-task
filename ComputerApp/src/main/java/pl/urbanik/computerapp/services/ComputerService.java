@@ -19,4 +19,6 @@ public interface ComputerService {
     List<Computer> getAllComputersByDataRev();
 
     List<Computer> searchComputers(String keyword);
+
+    Computer getComputerById(Long id);
 }
