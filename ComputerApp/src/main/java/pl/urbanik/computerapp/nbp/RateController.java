@@ -1,4 +1,4 @@
-package pl.urbanik.computerapp.nbp.exchange;
+package pl.urbanik.computerapp.nbp;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;

@@ -1,10 +1,10 @@
 package pl.urbanik.computerapp.controller;
 
 import lombok.AllArgsConstructor;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import pl.urbanik.computerapp.services.ComputerService;
 
 @Controller
@@ -19,7 +19,11 @@ public class ComputerController {
         model.addAttribute("computers", computerService.getAllComputers());
         return "/computer/list";
     }
-
+    @PostMapping()
+    public String search(@RequestParam String keyword, Model model) {
+        model.addAttribute("computers", computerService.searchComputers(keyword));
+            return "/computer/list";
+    }
 
     @GetMapping(value = "/list-data")
     public String getAllComputersByData(Model model) {

@@ -1,4 +1,4 @@
-package pl.urbanik.computerapp.nbp.exchange;
+package pl.urbanik.computerapp.nbp;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

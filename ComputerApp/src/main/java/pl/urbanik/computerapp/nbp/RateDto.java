@@ -1,4 +1,4 @@
-package pl.urbanik.computerapp.nbp.exchange;
+package pl.urbanik.computerapp.nbp;
 
 import lombok.Data;
 import lombok.ToString;

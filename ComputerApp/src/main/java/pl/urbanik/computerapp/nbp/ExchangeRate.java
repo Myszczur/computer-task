@@ -1,4 +1,4 @@
-package pl.urbanik.computerapp.nbp.exchange;
+package pl.urbanik.computerapp.nbp;
 
 public interface ExchangeRate {
 
