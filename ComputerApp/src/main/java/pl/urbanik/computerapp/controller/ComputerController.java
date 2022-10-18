@@ -1,7 +1,6 @@
 package pl.urbanik.computerapp.controller;
 
 import lombok.AllArgsConstructor;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -47,5 +46,11 @@ public class ComputerController {
     public String getAllComputersByNameReverse(Model model) {
         model.addAttribute("computers", computerService.getAllComputersByNameReverse());
         return "/computer/list-reversed";
+    }
+
+    @GetMapping(value = "/show/{id}")
+    public String showComputer(Model model, @PathVariable Long id) {
+        model.addAttribute("computer", computerService.getComputerById(id));
+        return "computer/show";
     }
 }
