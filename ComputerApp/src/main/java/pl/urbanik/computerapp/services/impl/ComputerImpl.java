@@ -50,6 +50,11 @@ public class ComputerImpl implements ComputerService {
     }
 
     @Override
+    public Computer getComputerById(Long id) {
+        return computerRepository.getById(id);
+    }
+
+    @Override
     public List<Computer> getAllComputersByData() {
         List<Computer> computers = computerRepository.findAll();
         computers.sort(Comparator.comparing(Computer::getAccountingDate));

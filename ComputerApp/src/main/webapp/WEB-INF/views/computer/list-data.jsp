@@ -5,19 +5,18 @@
 <head>
     <title>Order</title>
 </head>
-<a href="/order">Go to order</a>
+<a href="/order">Go to order&nbsp;&nbsp;</a>
 <body>
-<a href="/computer/list-name">Sort by Name</a>
-
-<a href="/computer/list-data-rev">Sort by Accounting date</a>
+<a href="/computer/list-name">Sort by Name&nbsp;&nbsp;</a>
+<a href="/computer/list-data-rev">Sort by Accounting date&nbsp;&nbsp;</a>
 <div>
     <table>
         <tr>
-            <th><h4><strong>Computer Id</strong></h4></th>
-            <th><h4><strong>Computer name</strong></h4></th>
-            <th><h4><strong>USD Cost</strong></h4></th>
-            <th><h4><strong>PLN Cost</strong></h4></th>
-            <th><h4><strong>Accounting date</strong></h4></th>
+            <th><h4><strong>Computer Id&nbsp;</strong></h4></th>
+            <th><h4><strong>Computer name&nbsp;</strong></h4></th>
+            <th><h4><strong>USD Cost&nbsp;</strong></h4></th>
+            <th><h4><strong>PLN Cost&nbsp;</strong></h4></th>
+            <th><h4><strong>Accounting date&nbsp;</strong></h4></th>
         </tr>
         <c:forEach items="${computers}" var="computers">
             <tr>
