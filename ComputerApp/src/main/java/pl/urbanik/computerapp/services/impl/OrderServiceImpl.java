@@ -19,6 +19,7 @@ import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 @Service
 @RequiredArgsConstructor
@@ -67,6 +68,22 @@ public class OrderServiceImpl implements OrderService {
 
         computerRepository.saveAll(this.computersList);
         this.computersList.clear();
+    }
+
+    @Override
+    public double summaryUsd() {
+        Stream<Computer> notNullObjs =
+                this.computersList.stream().filter(obj -> obj.getUsdCost() != null);
+
+        return notNullObjs.mapToDouble(Computer::getUsdCost).sum();
+    }
+
+    @Override
+    public double summaryPln() {
+        Stream<Computer> notNullObjs =
+                this.computersList.stream().filter(obj -> obj.getPlnCost() != null);
+
+        return notNullObjs.mapToDouble(Computer::getPlnCost).sum();
     }
 }
 

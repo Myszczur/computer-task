@@ -38,6 +38,8 @@ public class OrderController {
     @GetMapping(value = "/order-summary")
     public String orderList(Model model) {
         model.addAttribute("summary", orderService.getSummaryList());
+        model.addAttribute("usd", orderService.summaryUsd());
+        model.addAttribute("pln", orderService.summaryPln());
         return "order/order-summary";
     }
 

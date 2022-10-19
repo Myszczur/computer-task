@@ -16,16 +16,17 @@
         <c:forEach items="${summary}" var="summary">
             <tr>
                 <td><strong>${summary.name}</strong></td>
-                <td><strong>${summary.usdCost}</strong></td>
-                <td><strong>${summary.plnCost}</strong></td>
+                <td class="usd"><strong>${summary.usdCost}</strong></td>
+                <td class="pln"><strong>${summary.plnCost}</strong></td>
             </tr>
         </c:forEach>
     </table>
-    <div class="usdCost"></div>
-    <div class="plnCost"></div>
+    <br>
+    <div>USD Summary: ${usd}</div>
+    <div>PLN Summary: ${pln}</div>
+    <br>
     <a href="/order/save-order">Submit&nbsp;&nbsp;</a>
     <a href="/order/">Go back&nbsp;</a>
 </div>
-<script src="<c:url value="js/app.js"/>"></script>
 </body>
 </html>
