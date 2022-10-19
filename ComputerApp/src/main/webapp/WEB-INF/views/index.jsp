@@ -4,6 +4,7 @@
 <html>
 <head>
     <title>Computer App</title>
+    <link rel="stylesheet" href="<c:url value="resources/css/main.css"/>"/>
 </head>
 <body>
 <h4>What you want to do?</h4>

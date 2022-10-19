@@ -4,6 +4,7 @@
 <html>
 <head>
     <title>Facture</title>
+    <link rel="stylesheet" href="<c:url value="resources/css/main.css"/>"/>
 </head>
 <a href="/order">Go to order&nbsp;&nbsp;</a>
 <a href="/computer">Go to computer list&nbsp;&nbsp;</a>
