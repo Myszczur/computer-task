@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>Order</title>
-    <link rel="stylesheet" href="<c:url value="resources/css/main.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="../resources/css/main.css"/>"/>
 </head>
 <body>
 <div>
