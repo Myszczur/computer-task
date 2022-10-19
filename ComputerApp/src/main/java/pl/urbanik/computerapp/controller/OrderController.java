@@ -20,7 +20,6 @@ public class OrderController {
 
     private final OrderService orderService;
 
-
     @GetMapping()
     public String addComputer(Model model) {
         model.addAttribute("computer", new Computer());
@@ -30,7 +29,7 @@ public class OrderController {
     @PostMapping()
     public String saveToOrderList(@Valid Computer computer, BindingResult result) {
         if (result.hasErrors()) {
-            return "order/add";
+            return "/order/add";
         }
         orderService.saveComputerToList(computer);
         return "redirect:/order";
@@ -39,12 +38,14 @@ public class OrderController {
     @GetMapping(value = "/order-summary")
     public String orderList(Model model) {
         model.addAttribute("summary", orderService.getSummaryList());
+        model.addAttribute("usd", orderService.summaryUsd());
+        model.addAttribute("pln", orderService.summaryPln());
         return "order/order-summary";
     }
 
     @GetMapping("/save-order")
     public String saveOrder() throws IOException {
         orderService.saveOrder();
-        return "redirect:/order";
+        return "redirect:/computer";
     }
 }
