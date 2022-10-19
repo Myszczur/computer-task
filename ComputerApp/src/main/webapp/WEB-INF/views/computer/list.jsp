@@ -3,7 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Order</title>
+    <title>Computer List</title>
+    <link rel="stylesheet" href="<c:url value="resources/css/main.css"/>"/>
 </head>
 <a href="/order">Go to order&nbsp;&nbsp;</a>
 <a href="/facture">Go to facture list&nbsp;&nbsp;</a>
@@ -19,7 +20,7 @@
     </form>
     <table>
         <tr>
-            <th><h4><strong>Computer Id<&nbsp;</strong></h4></th>
+            <th><h4><strong>Computer Id&nbsp;</strong></h4></th>
             <th><h4><strong>Computer name&nbsp;</strong></h4></th>
             <th><h4><strong>USD Cost&nbsp;</strong></h4></th>
             <th><h4><strong>PLN Cost&nbsp;</strong></h4></th>

@@ -3,7 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Order</title>
+    <title>Facture</title>
+    <link rel="stylesheet" href="<c:url value="resources/css/main.css"/>"/>
 </head>
 <a href="/order">Go to order&nbsp;&nbsp;</a>
 <a href="/computer">Go to computer list&nbsp;&nbsp;</a>
