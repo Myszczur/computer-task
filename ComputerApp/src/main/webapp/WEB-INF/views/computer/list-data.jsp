@@ -4,14 +4,14 @@
 <html>
 <head>
     <title>Computer list</title>
-    <link rel="stylesheet" href="<c:url value="resources/css/main.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="/resources/css/main.css"/>"/>
 </head>
 <a href="/order">Go to order&nbsp;&nbsp;</a>
 <a href="/facture">Go to facture list&nbsp;&nbsp;</a>
 <body>
-<a href="/computer/list-name">Sort by Name&nbsp;&nbsp;</a>
-<a href="/computer/list-data-rev">Sort by Accounting date&nbsp;&nbsp;</a>
 <div>
+    <a href="/computer/list-name">Sort by Name&nbsp;&nbsp;</a>
+    <a href="/computer/list-data-rev">Sort by Accounting date&nbsp;&nbsp;</a>
     <table>
         <tr>
             <th><h4><strong>Computer Id&nbsp;</strong></h4></th>
