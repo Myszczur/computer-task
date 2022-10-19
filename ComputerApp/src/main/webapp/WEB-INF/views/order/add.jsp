@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>Order</title>
-    <link rel="stylesheet" href="<c:url value="resources/css/main.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="../resources/css/main.css"/>"/>
 </head>
 <body>
 <form:form method="post" modelAttribute="computer">
@@ -21,5 +21,6 @@
     <button type="submit">Add to Card</button>
 </form:form>
 <a href="/order/order-summary">Order Summary</a>
+<a href="/">Back to Home</a>
 </body>
 </html>

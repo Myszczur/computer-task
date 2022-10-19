@@ -4,14 +4,14 @@
 <html>
 <head>
     <title>Facture</title>
-    <link rel="stylesheet" href="<c:url value="resources/css/main.css"/>"/>
+    <link rel="stylesheet" href="<c:url value="../resources/css/main.css"/>"/>
 </head>
 <a href="/order">Go to order&nbsp;&nbsp;</a>
 <a href="/computer">Go to computer list&nbsp;&nbsp;</a>
 <body>
-<a href="/facture/list-reverse">Sort by Name&nbsp;&nbsp;</a>
-<a href="/facture/list-data">Sort by Accounting date&nbsp;&nbsp;</a>
 <div>
+    <a href="/facture/list-reverse">Sort by Name&nbsp;&nbsp;</a>
+    <a href="/facture/list-data">Sort by Accounting date&nbsp;&nbsp;</a>
     <table>
         <tr>
             <th><h4><strong>Facture Id&nbsp;</strong></h4></th>
