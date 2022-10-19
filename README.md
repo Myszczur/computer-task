@@ -62,7 +62,15 @@ Build the Project
 Start compiled JAR
 
 ```bash
-  java -cp target/ComputerApp-0.0.1-SNAPSHOT.jar pl.urbanik.computerapp.App
+  java -jar target/ComputerApp-0.0.1-SNAPSHOT.jar
+
+
+```
+
+Go to the browser and type
+
+```bash
+  http://localhost:8080/
 
 ```
 
