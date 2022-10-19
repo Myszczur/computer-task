@@ -13,4 +13,8 @@ public interface OrderService {
     List<Computer> getSummaryList();
 
     void saveOrder() throws IOException;
+
+    double summaryUsd();
+
+    double summaryPln();
 }
