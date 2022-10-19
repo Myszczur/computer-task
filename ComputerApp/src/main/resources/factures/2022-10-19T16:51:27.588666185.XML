@@ -1,0 +1,20 @@
+<faktura>
+  <komputer>
+    <name>komputer 1</name>
+    <usdCost>123.0</usdCost>
+    <plnCost>494.39</plnCost>
+    <dataRate>2022-01-03</dataRate>
+  </komputer>
+  <komputer>
+    <name>Komputer 2 </name>
+    <usdCost>321.0</usdCost>
+    <plnCost>1290.23</plnCost>
+    <dataRate>2022-01-03</dataRate>
+  </komputer>
+  <komputer>
+    <name>Komputer 3</name>
+    <usdCost>22.0</usdCost>
+    <plnCost>88.43</plnCost>
+    <dataRate>2022-01-03</dataRate>
+  </komputer>
+</faktura>
