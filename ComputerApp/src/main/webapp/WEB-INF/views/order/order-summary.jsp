@@ -21,8 +21,11 @@
             </tr>
         </c:forEach>
     </table>
+    <div class="usdCost"></div>
+    <div class="plnCost"></div>
     <a href="/order/save-order">Submit&nbsp;&nbsp;</a>
     <a href="/order/">Go back&nbsp;</a>
 </div>
+<script src="<c:url value="js/app.js"/>"></script>
 </body>
 </html>

@@ -24,7 +24,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
 
-    private static final String SAVE_XML_PATH = "/home/myszczur/Pulpit/computer-task/ComputerApp/src/main/resources/factures";
+    private static final String SAVE_XML_PATH = "/home/myszczur/Pulpit/computer-task/ComputerApp/src/main/resources/factures/";
     private final ExchangeRate exchangeRate;
     private final ComputerRepository computerRepository;
 
@@ -66,6 +66,7 @@ public class OrderServiceImpl implements OrderService {
         Files.write(pathXMLFile, xml.getBytes(), StandardOpenOption.WRITE, StandardOpenOption.APPEND, StandardOpenOption.CREATE);
 
         computerRepository.saveAll(this.computersList);
+        this.computersList.clear();
     }
 }
 
