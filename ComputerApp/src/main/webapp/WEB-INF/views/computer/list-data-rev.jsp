@@ -6,6 +6,7 @@
     <title>Order</title>
 </head>
 <a href="/order">Go to order&nbsp;&nbsp;</a>
+<a href="/facture">Go to facture list&nbsp;&nbsp;</a>
 <body>
 <a href="/computer/list-name">Sort by Name&nbsp;&nbsp;</a>
 <a href="/computer/list-data">Sort by Accounting date&nbsp;&nbsp;</a>

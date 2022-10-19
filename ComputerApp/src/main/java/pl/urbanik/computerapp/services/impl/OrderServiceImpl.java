@@ -5,10 +5,12 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import pl.urbanik.computerapp.models.Computer;
 import pl.urbanik.computerapp.models.Facture;
+import pl.urbanik.computerapp.models.FactureXml;
 import pl.urbanik.computerapp.nbp.ExchangeRate;
 import pl.urbanik.computerapp.nbp.RateDto;
 import pl.urbanik.computerapp.nbp.TableDto;
 import pl.urbanik.computerapp.repository.ComputerRepository;
+import pl.urbanik.computerapp.repository.FactureXmlRepository;
 import pl.urbanik.computerapp.services.OrderService;
 
 import java.io.IOException;
@@ -28,6 +30,8 @@ public class OrderServiceImpl implements OrderService {
     private static final String SAVE_XML_PATH = "/home/myszczur/Pulpit/computer-task/ComputerApp/src/main/resources/factures/";
     private final ExchangeRate exchangeRate;
     private final ComputerRepository computerRepository;
+
+    private final FactureXmlRepository factureXmlRepository;
 
     private List<Computer> computersList = new ArrayList<>();
 
@@ -65,6 +69,10 @@ public class OrderServiceImpl implements OrderService {
         LocalDateTime time = LocalDateTime.now();
         Path pathXMLFile = Paths.get(SAVE_XML_PATH + time + ".XML");
         Files.write(pathXMLFile, xml.getBytes(), StandardOpenOption.WRITE, StandardOpenOption.APPEND, StandardOpenOption.CREATE);
+
+        FactureXml factureXml = new FactureXml();
+        factureXml.setName(time.toString());
+        factureXmlRepository.save(factureXml);
 
         computerRepository.saveAll(this.computersList);
         this.computersList.clear();
